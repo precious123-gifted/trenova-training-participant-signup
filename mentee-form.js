@@ -26,9 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
       createdDate,
     };
 
-    axios.post('https://trenova-training-participants-data-api.vercel.app/', formData)
+    const headers = {
+      'Access-Control-Allow-Origin': '*', // Allow requests from any origin, replace '*' with your desired origin if needed
+      'Access-Control-Allow-Methods': 'POST', // Allow only POST requests, adjust as needed
+      'Access-Control-Allow-Headers': 'Content-Type', // Allow Content-Type header, adjust as needed
+    };
+
+    axios.post('https://trenova-training-participants-data-api.vercel.app/', formData, { headers })
       .then(function(response) {
         console.log(response.data);
+        alert('data sent');
         // Handle the response as needed
       })
       .catch(function(error) {
