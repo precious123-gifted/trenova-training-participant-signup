@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'Access-Control-Allow-Origin': '*', // Allow requests from any origin, replace '*' with your desired origin if needed
       'Access-Control-Allow-Methods': 'POST', // Allow only POST requests, adjust as needed
       'Access-Control-Allow-Headers': 'Content-Type', // Allow Content-Type header, adjust as needed
+      withCredentials: true,
     };
 
     axios.post('https://trenova-training-participants-data-api.vercel.app/', formData, { headers })
