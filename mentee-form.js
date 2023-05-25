@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const headers = {
-      'Access-Control-Allow-Origin': '*', // Allow requests from any origin, replace '*' with your desired origin if needed
-      'Access-Control-Allow-Methods': 'POST', // Allow only POST requests, adjust as needed
-      'Access-Control-Allow-Headers': 'Content-Type', // Allow Content-Type header, adjust as needed
+      'Content-Type': 'application/json',
       withCredentials: true,
     };
 
