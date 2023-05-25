@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       withCredentials: true,
     };
 
-    axios.post('https://trenova-training-participants-data-api.vercel.app/', formData, { headers })
+    axios.post('https://trenova-training-participants-data-api-3ccr.vercel.app/api/auth/signup', formData, { headers })
       .then(function(response) {
         console.log(response.data);
         alert('data sent');
