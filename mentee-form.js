@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const headers = {
       'Content-Type': 'application/json',
-      withCredentials: true,
     };
 
-    axios.post('https://trenova-training-participants-data-api-3ccr.vercel.app/api/auth/signup', formData, { headers })
+    axios.post('https://trenova-training-participants-data-api-3ccr.vercel.app/api/auth/signup', formData, { headers, withCredentials: true })
       .then(function(response) {
         console.log(response.data);
         alert('data sent');
